@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبرد مدیر مرکز @ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/fonts/awsomefonts/all.min.css" rel="stylesheet" />
+    <link href="~/fonts/awsomefonts/brands.min.css" rel="stylesheet" />
+    <link href="~/fonts/awsomefonts/solid.min.css" rel="stylesheet" />
+    <link href="~/fonts/font-injector.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/chartjs/Chart.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">داشبورد مدیریت سامانه گفتار ایرانیان به متن (سگام)</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @Html.Action("GetNameByUserName", "Helper", new { Area = "Admin", username = User.Identity.Name })
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="@Url.Action("Index", "UserProfile", new { Area = "Admin" } )"><span class="fa fa-user-circle"></span> تنظیمات کاربری </a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/Login/SignOut"><span class="fa fa-sign-out-alt"></span> خروج </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="~/Help/index.htm" class="btn btn-light" target="_blank">راهنمای نرم افزار</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <img src="~/Areas/Admin/images/admin-icon.png" style="width:150px; height:150px" />
+                        <div class="card-body">
+                        </div>
+                    </div>
+                    <a href="@Url.Action("Index", "Home", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-home"></span>
+                        <span>آمار کاربران</span>
+                    </a>
+                    <a href="@Url.Action("Index", "FileUploader", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-file"></span>
+                        <span>ارسال فایل</span>
+                    </a>
+                    <a href="@Url.Action("Index", "FileConfirmation", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-cube"></span>
+                        <span>تایید فایل</span>
+                    </a>
+                    <a href="@Url.Action("Index", "Monitoring", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-chalkboard-teacher"></span>
+                        <span>نظارت بر وظایف</span>
+                    </a>
+                    <a href="@Url.Action("Index", "UserManagement", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-user-edit"></span>
+                        <span>مدیریت کاربران</span>
+                    </a>
+                    <a href="@Url.Action("Index", "UserProfile", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-user-circle"></span>
+                        <span>تنظیمات کاربری</span>
+                    </a>
+                    <a href="@Url.Action("Index", "UserApp", new { Area = "Admin" } )" class="list-group-item list-group-item-action">
+                        <span class="fa fa-archive"></span>
+                        <span>نرم افزار کاربردی</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <br />
+                <br />
+                <div class="form-group">
+                    @RenderBody()
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Areas/Admin/Content/chartjs/Chart.min.js"></script>
+    @RenderSection("scripts", false)
+    @RenderSection("chart", false)
+    @RenderSection("supervised_sctipts", false)
+</body>
+</html>

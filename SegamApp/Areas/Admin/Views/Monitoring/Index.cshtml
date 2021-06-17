@@ -1,0 +1,140 @@
+﻿@model DataLayer.MVPagination
+@{
+    ViewBag.Title = "| نظارت";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>نظارت بر وظایف</h2>
+
+@using (Html.BeginForm("Index", "Monitoring", FormMethod.Post))
+{
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+
+                @{List<SelectListItem> persons = (List<SelectListItem>)ViewBag.Persons;}
+
+
+                @Html.DropDownList("personId", persons, new { @class = "form-control", @id = "drperson" })
+
+            </div>
+            <div class="col-md-4">
+                <input type="submit" value="اعمال فیلتر" class="btn btn-info" />
+            </div>
+
+            <div class="col-md-4">
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> فعالیت های تایید نشده</h5>
+            <table id="task" class="table table-sm table-hover table-striped">
+                <tbody>
+                    @foreach (var item in Model.MVTask)
+                    {
+                        var siblid = item.FileID + "sibling";
+                        <tr id=@siblid>
+                              <td>
+                                  <audio controls="controls">
+                                      <source src="@Url.Content(String.Format("~/Dataset/{0}/{1}/{2}{3}", item.CreatorId, item.SequenceId, item.FileID, item.FileType))" type="audio/mpeg" />
+                                  </audio>
+                              </td>
+                          </tr>
+  
+                          <tr id="@item.FileID">
+  
+                              <td class="col-12">
+                                <input type="text" id="TextBox" class="form-control" value="@item.Text" aria-describedby="" placeholder="متن خوانده شده را وارد نمایید">
+                            </td>
+                            <td>
+                                <a class="btn btn-success" href="#">تایید</a>
+                            </td>
+                            <td>
+                                <span id="@item.FileID"></span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+<!-- Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">تایید ثبت</h4>
+            </div>
+            <div class="modal-body" id="MymodalBody">
+                آیا از تایید این متن مطمئن هستید؟
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">انصراف</button>
+                <button class="btn btn-primary" id="register" href="#">ثبت</button>
+                <div id="sppiner" class="spinner-border text-primary" role="status">
+                </div>
+            </div>
+
+            <div style="display:none" id="modaldata">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+@section supervised_sctipts{
+    <script type="text/javascript">
+
+        $("#task .btn").click(function () {
+
+            row = $(this).closest("tr")
+            Fileid = row.attr('id')
+            input = row.find("input[type=text]")
+
+            newUrl = "/Monitoring/Submit?id=" + Fileid + "&" + "text=" + input.val();
+            $("#register").attr("href", newUrl);
+
+            $("#confirmModal").modal();
+
+            $("#sppiner").hide()
+        })
+
+        $("#register").click(function () {
+
+            $("#sppiner").show()
+            $.ajax({
+                url: $("#register").attr("href"),
+                type: "POST",
+                contentType: false, // Not to set any content header
+                processData: false, // Not to process data
+                success: function (result) {
+
+                    $("#sppiner").hide()
+                    $("#confirmModal").modal('hide')
+                    fileId = result.FileId
+
+                    if (!result.IsEmpty) {
+                        $("#" + fileId).fadeOut(2000)
+                        $("#" + fileId + "sibling").fadeOut(2000)
+                    }
+                },
+                error: function (err) {
+
+                    $("#sppiner").hide()
+                    $("#confirmModal").modal('hide')
+                    alert("مشکلی در سرور رخ داده لطفا مجددا تلاش کنید")
+                }
+            }
+            )
+        })
+
+    </script>
+}

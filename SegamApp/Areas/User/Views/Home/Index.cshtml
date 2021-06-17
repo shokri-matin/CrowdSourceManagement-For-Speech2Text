@@ -1,0 +1,162 @@
+﻿@model DataLayer.VMUserHomeProfile
+@{
+    ViewBag.Title = "| خانه";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Areas/User/Content/css/card.css" rel="stylesheet" />
+<br />
+<div class="container">
+    <div class="row">
+        <br />
+    </div>
+    <div class="row">
+        <!-- Task Card -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xl-right font-weight-bold text-info mb-1">وظایف فعال @Model.InProgressTasks</div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">@Model.ProgressActiveTask%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: @Model.ProgressActiveTask%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Tasks Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xl-right font-weight-bold text-primary mb-1">وظایف تکمیل شده</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.CompeletedTasks</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-tasks fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Files Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-right font-weight-bold text-success mb-1">کل فایل های ثبت شده</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalCompeleteFile</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-file fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- withdraw Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-right font-weight-bold text-warning mb-1">وظایف بازپس گرفته شده</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.WithdrawTasks</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fa fa-trash-alt fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <span class="fa fa-sticky-note"></span>
+        <h4>وظیفه در حال اجرا</h4>
+    </div>
+    <div class="row">
+        @if (Model.InProgressTasks <= 0)
+        {
+            <span>هم اکنون وظیفه فعالی ندارید. لطفا از طریق <a class="btn btn-danger" href="@Url.Action("TaskRequest", "Home", new { Area = "User" } )">این لینک</a> درخواست جدیدی دهید.</span>
+            <br />
+            <br />
+            <br />
+            <span class="bg-warning">@TempData["Lack_of_file"]</span>
+        }
+        else
+        {
+            <span>هم اکنون وظیفه شما از طریق <a class="btn btn-success" href="@Url.Action("Index", "Task", new { Area = "User" } )">این لینک</a> در دسترس می باشد.</span>
+        }
+
+        
+
+    </div>
+    <br />
+    <hr />
+    <div class="row">
+        <span class="fa fa-calendar"></span>
+        <h4>رویداد ها</h4>
+        <table class="table table-responsive">
+            <tbody>
+                <tr>
+                    <th>تاریخ فعالت</th>
+                    <th>ساعت فعالت</th>
+                    <th>نوع فعالیت</th>
+                </tr>
+            </tbody>
+
+            @foreach (var personActivity in Model.personActivityLogs)
+            {
+                if (personActivity.ActivityStatus == (int)DataLayer.ActivityStatus.Login)
+                {
+                    <tr class="alert-success">
+                        <td>
+                            @personActivity.LoginTime.ToShamsi()[0]
+                        </td>
+                        <td>
+                            @personActivity.LoginTime.ToShamsi()[1]
+                        </td>
+                        <td>
+                            ورود
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr class="alert-danger">
+                        <td>
+                            @personActivity.LoginTime.ToShamsi()[0]
+                        </td>
+                        <td>
+                            @personActivity.LoginTime.ToShamsi()[1]
+                        </td>
+                        <td>
+                            خروج
+                        </td>
+                    </tr>
+                }
+            }
+
+
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<DataLayer.Person>
+
+@{
+    ViewBag.Title = "| مدیریت کاربران";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("ایجاد کاربر جدید", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Role.RoleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+         </th>
+        <th>
+            عملیات
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.PersonName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PersonEmail)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Password)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Role.RoleName)
+    </td>
+    <td>
+        @if (item.IsDeleted)
+        {
+            <span class="fa fa-window-close"></span>
+        }
+        else
+        {
+            <span class="fa fa-check-circle"></span>
+        }
+        @*Html.DisplayFor(modelItem => item.IsDeleted)*@
+    </td>
+    <td>
+        @Html.ActionLink(" ", "Edit", new { id = item.PersonID }, new { @class = "fa fa-edit" }) |
+        @*@Html.ActionLink("Details", "Details", new { id=item.PersonID }) |*@
+        @Html.ActionLink(" ", "Delete", new { id = item.PersonID }, new { @class = "fa fa-trash" })
+    </td>
+</tr>
+}
+
+</table>

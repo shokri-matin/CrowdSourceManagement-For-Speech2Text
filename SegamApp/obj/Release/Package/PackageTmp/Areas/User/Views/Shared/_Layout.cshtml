@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبرد کاربری مراکز @ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/fonts/awsomefonts/all.min.css" rel="stylesheet" />
+    <link href="~/fonts/awsomefonts/brands.min.css" rel="stylesheet" />
+    <link href="~/fonts/awsomefonts/solid.min.css" rel="stylesheet" />
+    <link href="~/fonts/font-injector.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">داشبورد کاربری سامانه گفتار ایرانیان به متن (سگام)</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @Html.Action("GetNameByUserName", "Helper", new { Area = "User", username = User.Identity.Name })
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="@Url.Action("Index", "UserProfile", new { Area = "User" })"><span class="fa fa-user-circle"></span> تنظیمات کاربری </a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/Login/SignOut"><span class="fa fa-sign-out-alt"></span> خروج </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="~/Help/index.htm" class="btn btn-light" target="_blank">راهنمای نرم افزار</a>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <img src="~/Areas/User/images/user.png" style="width:150px; height:150px" />
+                        <div class="card-body">
+                        </div>
+                    </div>
+                    <a href="@Url.Action("Index", "Home", new { Area = "User" })" class="list-group-item list-group-item-action">
+                        <span class="fa fa-home"></span>
+                        <span>خانه</span>
+                    </a>
+                    <a href="@Url.Action("Index", "Task", new { Area = "User" })" class="list-group-item list-group-item-action">
+                        <span class="fa fa-file"></span>
+                        <span>وظیفه در حال اجرا</span>
+                    </a>
+                    <a href="@Url.Action("Index", "UserProfile", new { Area = "User" })" class="list-group-item list-group-item-action">
+                        <span class="fa fa-user-edit"></span>
+                        <span>مدیریت رمز عبور</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <br />
+                <div class="form-group">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    @RenderSection("scripts", false)
+    @RenderSection("submit_sctipts", false)
+    @RenderSection("modal_scripts", false)
+</body>
+</html>

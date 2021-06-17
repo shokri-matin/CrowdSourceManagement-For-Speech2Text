@@ -1,0 +1,180 @@
+﻿@model DataLayer.MVPagination
+@{
+    ViewBag.Title = "| وظیفه در حال اجرا";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> فعالیت های شما</h5>
+            <table id="task" class="table table-sm table-hover table-striped">
+                <tbody>
+                    @foreach (var item in Model.MVTask)
+                    {
+                        string style = "";
+                        if (item.IsSubmited)
+                        {
+                            style = "background-color:forestgreen";
+                        }
+
+                        <tr>
+                            <td>
+                                @if (item.FileType == ".wav")
+                                {
+                                    <audio controls="controls">
+                                        <source src="@Url.Content(String.Format("~/Dataset/{0}/{1}/{2}.wav", item.CreatorId, item.SequenceId, item.FileID))" type="audio/mpeg" />
+                                    </audio>
+                                }
+                                else
+                                {
+                                    <audio controls="controls">
+                                        <source src="@Url.Content(String.Format("~/Dataset/{0}/{1}/{2}.mp3", item.CreatorId, item.SequenceId, item.FileID))" type="audio/mpeg" />
+                                    </audio>
+                                }
+                            </td>
+                        </tr>
+
+                        <tr id="@item.FileID" style=@style>
+                            <td class="col-12">
+                                <input type="text" id="TextBox" class="form-control" value="@item.Text" aria-describedby="" placeholder="متن خوانده شده را وارد نمایید">
+                            </td>
+                            @*<td>
+                                <span>زمان پخش :</span>
+                                <span>@Convert.ToInt32(Math.Floor(item.FileDuration))</span>
+                                <span>ثانیه</span>
+                            </td>*@
+
+                            <td>
+                                <a class="btn btn-success" href="#">ثبت</a>
+                            </td>
+                            <td>
+                                <span id="@item.FileID"></span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    @{ double count = (double)Model.Count / 10; }
+                    @for (int i = 1; i <= Math.Ceiling(count); i++)
+                    {
+                        if (i == Model.CurrentPage)
+                        {
+                            <li class="page-item active">
+                                <a class="page-link" id="@i" href="@Url.Action("Index", "Task", new { Area = "User", page = i, number = 10 })">@i</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item">
+                                <a class="page-link" id="@i" href="@Url.Action("Index", "Task", new { Area = "User", page = i, number = 10 })">@i</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <br />
+    <hr />
+    @if (Model.Count > 0)
+    {
+        <div class="row">
+            <div class="col-8">
+                <span>لطفا در صورت اطمینان از اتمام وظیفه نسبت به جمع آوری آن اقدام نموده و وظیفه جدید دریافت کنید</span>
+            </div>
+            <div class="col-2">
+                @Html.ActionLink("اتمام و جمع آوری", "EndTask", "Task", new { area = "User" }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-12">
+                <span class="alert-info">@TempData["errMessage"]</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        <span>در حال حاظر فعالیتی وجود ندارد</span>
+    }
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">تایید ثبت</h4>
+            </div>
+            <div class="modal-body" id="MymodalBody">
+                آیا از ثبت این متن مطمئن هستید؟
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">انصراف</button>
+                <button class="btn btn-primary" id="register" href="#">ثبت</button>
+                <div id="sppiner" class="spinner-border text-primary" role="status">
+                </div>
+            </div>
+
+            <div style="display:none" id="modaldata">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+@section submit_sctipts{
+    <script type="text/javascript">
+
+        $("#task .btn").click(function () {
+
+            row = $(this).closest("tr")
+            Fileid = row.attr('id')
+            input = row.find("input[type=text]")
+
+            newUrl = "/Task/Submit?id=" + Fileid + "&" + "text=" + input.val();
+            $("#register").attr("href", newUrl);
+
+            $("#confirmModal").modal();
+
+            $("#sppiner").hide()
+        })
+
+        $("#register").click(function () {
+
+            $("#sppiner").show()
+            $.ajax({
+                url: $("#register").attr("href"),
+                type: "POST",
+                contentType: false, // Not to set any content header
+                processData: false, // Not to process data
+                success: function (result) {
+
+                    $("#sppiner").hide()
+                    $("#confirmModal").modal('hide')
+                    fileId = result.FileId
+
+                    if (result.IsEmpty)
+                        $("#" + fileId).css("background-color", "white")
+                    else
+                        $("#" + fileId).css("background-color", "forestgreen")
+                },
+                error: function (err) {
+
+                    $("#sppiner").hide()
+                    $("#confirmModal").modal('hide')
+                    alert("مشکلی در سرور رخ داده لطفا مجددا تلاش کنید")
+                }
+            }
+            )
+        })
+
+    </script>
+}

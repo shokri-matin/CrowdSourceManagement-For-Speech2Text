@@ -1,0 +1,87 @@
+E:\Segam\SegamApp\DataLayer\bin\Debug\DataLayer.dll.config
+E:\Segam\SegamApp\DataLayer\bin\Debug\DataLayer.dll
+E:\Segam\SegamApp\DataLayer\bin\Debug\DataLayer.pdb
+E:\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.dll
+E:\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.xml
+E:\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db01.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db02.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db03.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db05.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db06.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db07.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db08.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db09.resources
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.dll
+E:\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\DataLayer.dll.config
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.dll
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.xml
+E:\Projects\Segam\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db01.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db02.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db03.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db05.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db06.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db07.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db08.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db09.resources
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+E:\Projects\Segam\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db10.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\DataLayer.dll.config
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\DataLayer.dll
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\DataLayer.pdb
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\EntityFramework.dll
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\EntityFramework.xml
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db01.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db02.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db03.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db05.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db06.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db07.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db08.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db09.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db10.resources
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.dll
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.pdb
+E:\Segam\SegamApp v1.1\SegamApp\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\DataLayer.dll.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\DataLayer.pdb
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\EntityFramework.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\EntityFramework.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db01.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db02.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db03.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db05.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db06.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db07.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db08.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db09.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db10.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db11.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db12.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db13.resources
+E:\Projects\Segam\SegamApp v1.2\SegamApp\DataLayer\obj\Debug\DataLayer.Migrations.db131.resources

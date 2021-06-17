@@ -1,0 +1,322 @@
+E:\Segam\SegamApp\SegamApp\bin\SegamApp.dll.config
+E:\Segam\SegamApp\SegamApp\bin\SegamApp.dll
+E:\Segam\SegamApp\SegamApp\bin\SegamApp.pdb
+E:\Segam\SegamApp\SegamApp\bin\roslyn\csc.exe
+E:\Segam\SegamApp\SegamApp\bin\roslyn\csc.exe.config
+E:\Segam\SegamApp\SegamApp\bin\roslyn\csc.rsp
+E:\Segam\SegamApp\SegamApp\bin\roslyn\csi.exe
+E:\Segam\SegamApp\SegamApp\bin\roslyn\csi.exe.config
+E:\Segam\SegamApp\SegamApp\bin\roslyn\csi.rsp
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.AppContext.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Console.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Globalization.Calendars.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Net.Http.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Net.Sockets.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.ValueTuple.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Segam\SegamApp\SegamApp\bin\roslyn\vbc.exe
+E:\Segam\SegamApp\SegamApp\bin\roslyn\vbc.exe.config
+E:\Segam\SegamApp\SegamApp\bin\roslyn\vbc.rsp
+E:\Segam\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe
+E:\Segam\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Segam\SegamApp\SegamApp\bin\DataLayer.dll
+E:\Segam\SegamApp\SegamApp\bin\EntityFramework.dll
+E:\Segam\SegamApp\SegamApp\bin\EntityFramework.SqlServer.dll
+E:\Segam\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Segam\SegamApp\SegamApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Segam\SegamApp\SegamApp\bin\NAudio.dll
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Helpers.dll
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Mvc.dll
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Razor.dll
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.dll
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.dll
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.dll
+E:\Segam\SegamApp\SegamApp\bin\DataLayer.pdb
+E:\Segam\SegamApp\SegamApp\bin\DataLayer.dll.config
+E:\Segam\SegamApp\SegamApp\bin\EntityFramework.xml
+E:\Segam\SegamApp\SegamApp\bin\EntityFramework.SqlServer.xml
+E:\Segam\SegamApp\SegamApp\bin\NAudio.xml
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Razor.xml
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.xml
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.xml
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.xml
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Helpers.xml
+E:\Segam\SegamApp\SegamApp\bin\System.Web.Mvc.xml
+E:\Segam\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.csprojAssemblyReference.cache
+E:\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.csproj.CopyComplete
+E:\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.dll
+E:\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.pdb
+E:\Projects\Segam\SegamApp\SegamApp\bin\SegamApp.dll.config
+E:\Projects\Segam\SegamApp\SegamApp\bin\SegamApp.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\SegamApp.pdb
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\csc.exe
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\csc.exe.config
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\csc.rsp
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\csi.exe
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\csi.exe.config
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\csi.rsp
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.AppContext.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Console.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Globalization.Calendars.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Net.Http.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Net.Sockets.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.ValueTuple.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\vbc.exe
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\vbc.exe.config
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\vbc.rsp
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe
+E:\Projects\Segam\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\Segam\SegamApp\SegamApp\bin\DataLayer.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\EntityFramework.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\EntityFramework.SqlServer.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\NAudio.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Helpers.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Mvc.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Razor.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.dll
+E:\Projects\Segam\SegamApp\SegamApp\bin\DataLayer.pdb
+E:\Projects\Segam\SegamApp\SegamApp\bin\DataLayer.dll.config
+E:\Projects\Segam\SegamApp\SegamApp\bin\EntityFramework.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\EntityFramework.SqlServer.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\NAudio.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Razor.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Helpers.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\System.Web.Mvc.xml
+E:\Projects\Segam\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.csprojAssemblyReference.cache
+E:\Projects\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.csproj.CoreCompileInputs.cache
+E:\Projects\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.csproj.CopyComplete
+E:\Projects\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.dll
+E:\Projects\Segam\SegamApp\SegamApp\obj\Debug\SegamApp.pdb
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\SegamApp.dll.config
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\SegamApp.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\SegamApp.pdb
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\csc.exe
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\csc.exe.config
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\csc.rsp
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\csi.exe
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\csi.exe.config
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\csi.rsp
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.AppContext.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Console.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Globalization.Calendars.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Net.Http.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Net.Sockets.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.ValueTuple.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\vbc.exe
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\vbc.exe.config
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\vbc.rsp
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\DataLayer.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\EntityFramework.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\EntityFramework.SqlServer.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\NAudio.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Helpers.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Mvc.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Razor.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Webpages.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\DataLayer.pdb
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\DataLayer.dll.config
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\EntityFramework.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\EntityFramework.SqlServer.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\NAudio.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Razor.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Webpages.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Helpers.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\System.Web.Mvc.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\obj\Debug\SegamApp.csprojAssemblyReference.cache
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\obj\Debug\SegamApp.csproj.CopyComplete
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\obj\Debug\SegamApp.dll
+E:\Segam\SegamApp v1.1\SegamApp\SegamApp\obj\Debug\SegamApp.pdb
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\SegamApp.dll.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\SegamApp.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\SegamApp.pdb
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\csc.exe
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\csc.exe.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\csc.rsp
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\csi.exe
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\csi.exe.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\csi.rsp
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.AppContext.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Console.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Globalization.Calendars.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Net.Http.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Net.Sockets.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.ValueTuple.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\vbc.exe
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\vbc.exe.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\vbc.rsp
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\DataLayer.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\EntityFramework.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\EntityFramework.SqlServer.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\NAudio.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Helpers.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Mvc.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Razor.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Webpages.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\DataLayer.pdb
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\DataLayer.dll.config
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\EntityFramework.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\EntityFramework.SqlServer.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\NAudio.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Razor.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Webpages.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Webpages.Deployment.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Webpages.Razor.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Helpers.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\System.Web.Mvc.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\obj\Debug\SegamApp.csprojAssemblyReference.cache
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\obj\Debug\SegamApp.csproj.CoreCompileInputs.cache
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\obj\Debug\SegamApp.csproj.CopyComplete
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\obj\Debug\SegamApp.dll
+E:\Projects\Segam\SegamApp v1.2\SegamApp\SegamApp\obj\Debug\SegamApp.pdb

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "| پروفایل";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+@using (Html.BeginForm("Index", "UserProfile", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>تغییر رمز عبور</h4>
+    <hr />
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.Label("رمز عبور جدید", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.Editor("رمز عبور جدید", null, "pass1", new { htmlAttributes = new { @class = "form-control" } })
+            @*@Html.ValidationMessage("pass1","", new { @class = "text-danger" })*@
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("تکرار رمز عبور جدید", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.Editor("رمز عبور جدید", null, "pass2", new { htmlAttributes = new { @class = "form-control" } })
+            @*@Html.ValidationMessage("pass2","", new { @class = "text-danger" })*@
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-10">
+            <span class="alert-success">@ViewBag.PassChangeSucc</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="ذخیره" class="btn btn-primary" />
+        </div>
+    </div>
+
+</div>
+}

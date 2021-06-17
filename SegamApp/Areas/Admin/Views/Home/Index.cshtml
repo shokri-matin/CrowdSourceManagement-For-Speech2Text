@@ -1,0 +1,274 @@
+﻿@model ICollection<DataLayer.VMPersonStatus>
+@{
+    ViewBag.Title = "| آمار کاربران";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 border border-primary">
+
+            <div id="FilePerGroupDiv" class="spinner-grow text-success" role="status">
+
+            </div>
+            <canvas id="FilePerGroup"></canvas>
+
+        </div>
+
+        <div class="col-6 border border-primary">
+
+            <div id="FilePerGroupSubmittedDiv" class="spinner-grow text-success" role="status">
+
+            </div>
+            <canvas id="FilePerGroupSubmitted"></canvas>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 border border-primary">
+
+            <div id="TaskStatusDiv" class="spinner-grow text-success" role="status">
+
+            </div>
+            <canvas id="TaskStatus"></canvas>
+
+        </div>
+
+        <div class="col-6 border border-primary">
+            <div id="FilePerGroupHourDiv" class="spinner-grow text-success" role="status">
+            </div>
+            <canvas id="FilePerGroupHour"></canvas>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-12">
+
+            <table class="table table-responsive">
+                <tbody>
+                    <tr>
+                        <th>کاربر</th>
+                        <th>آخرین فعالیت</th>
+                        <th>وظیفه فعال</th>
+                        <th>تعداد وظایف تکمیل شده</th>
+                        <th>کل فایل های ارسال کرده</th>
+                        <th>فایل های ارسال کرده (امروز)</th>
+                    </tr>
+                </tbody>
+                
+                @foreach (var p in Model)
+                {
+                    <tr class="alert-info">
+                        <td>
+                            @p.PersonName
+                        </td>
+
+                        @if (p.LastLoginTime != DateTime.MinValue)
+                        {
+                            <td>
+                                @p.LastLoginTime.ToShamsi()[0]
+                            </td>
+                        }
+                        else
+                        {
+                            <td>
+                                هیچ وقت
+                            </td>
+                        }
+
+                        @if (p.HaveProgressTask)
+                        {
+                            <td>دارد</td>
+                        }
+                        else
+                        {
+                            <td>ندارد</td>
+                        }
+                        <td>
+                            @p.TaskCompleted
+                        </td>
+                        <td>
+                            @p.FileCompeleted
+                        </td>
+                        <td>
+                            @p.TodayFileCompleted
+                        </td>
+                    </tr>
+                }
+            </table>
+
+
+        </div>
+    </div>
+</div>
+
+@section chart{
+
+    <script type="text/javascript">
+        $.ajax({
+            url: "/Admin/Home/FilePerGroupSubmitted",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (chData) {
+
+                $("#FilePerGroupSubmittedDiv").hide()
+
+                var aData = chData;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var dataT = {
+                    labels: aLabels,
+                    datasets: [{
+                        label: "",
+                        data: aDatasets1,
+                        fill: false,
+                        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                        borderColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                        borderWidth: 2
+                    }]
+                };
+                var ctx = $("#FilePerGroupSubmitted").get(0).getContext("2d");
+
+                Chart.defaults.global.defaultFontFamily = "IRANSans";
+                //Chart.defaults.global.defaultFontSize = "13";
+                var myNewChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: dataT,
+                    options: {
+                        responsive: true,
+                        title: { display: true, text: 'تعداد فایهای انجام شده توسط کاربران در هر گروه' },
+                        legend: { position: 'bottom' },
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            url: "/Admin/Home/FilePerGroup",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (chData) {
+
+                $("#FilePerGroupDiv").hide()
+
+                var aData = chData;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var dataT = {
+                    labels: aLabels,
+                    datasets: [{
+                        label: "",
+                        data: aDatasets1,
+                        fill: false,
+                        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                        borderColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                        borderWidth: 2
+                    }]
+                };
+                var ctx = $("#FilePerGroup").get(0).getContext("2d");
+
+                Chart.defaults.global.defaultFontFamily = "IRANSans";
+                //Chart.defaults.global.defaultFontSize = "13";
+                var myNewChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: dataT,
+                    options: {
+                        responsive: true,
+                        title: { display: true, text: 'تعداد فایهای آپلود شده در هر گروه' },
+                        legend: { position: 'bottom' },
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            url: "/Admin/Home/TasksStatus",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (chData) {
+
+                $("#TaskStatusDiv").hide()
+
+                var aData = chData;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var dataT = {
+                    labels: aLabels,
+                    datasets: [{
+                        label: "",
+                        data: aDatasets1,
+                        fill: false,
+                        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                        borderColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                        borderWidth: 2
+                    }]
+                };
+                var ctx = $("#TaskStatus").get(0).getContext("2d");
+
+                Chart.defaults.global.defaultFontFamily = "IRANSans";
+                //Chart.defaults.global.defaultFontSize = "13";
+                var myNewChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: dataT,
+                    options: {
+                        responsive: true,
+                        title: { display: true, text: 'وضعیت وظایف' },
+                        legend: { position: 'bottom' },
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        $.ajax({
+            url: "/Admin/Home/FilePerGroupHours",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (chData) {
+
+                $("#FilePerGroupHourDiv").hide()
+
+                var aData = chData;
+                var aLabels = aData[0];
+                var aDatasets1 = aData[1];
+                var dataT = {
+                    labels: aLabels,
+                    datasets: [{
+                        label: "",
+                        data: aDatasets1,
+                        fill: false,
+                        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)", "rgba(255, 205, 86, 0.2)", "rgba(75, 192, 192, 0.2)", "rgba(153, 102, 255, 0.2)", "rgba(201, 203, 207, 0.2)"],
+                        borderColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)", "rgb(255, 159, 64)", "rgb(255, 205, 86)", "rgb(75, 192, 192)", "rgb(153, 102, 255)", "rgb(201, 203, 207)"],
+                        borderWidth: 2
+                    }]
+                };
+                var ctx = $("#FilePerGroupHour").get(0).getContext("2d");
+
+                Chart.defaults.global.defaultFontFamily = "IRANSans";
+                //Chart.defaults.global.defaultFontSize = "13";
+                var myNewChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: dataT,
+                    options: {
+                        responsive: true,
+                        title: { display: true, text: 'فایل های آپلود شده در هر گروه بر حسب دقیقه' },
+                        legend: { position: 'bottom' },
+                    }
+                });
+            }
+        });
+    </script>
+
+
+}

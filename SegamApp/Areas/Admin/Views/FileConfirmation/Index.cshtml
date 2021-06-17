@@ -1,0 +1,103 @@
+﻿@model ICollection<DataLayer.ViewModel.VMFileConfirmation>
+@{
+    ViewBag.Title = "| تایید فایل";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>تایید دسته فایل ها برای ارسال به زمان بند</h2>
+<div class="container">
+    <div class="row">
+        <div id="accordion">
+            @{string seq = ""; }
+
+            @foreach (var item in @Model)
+            {
+                string seqID1 = "#collapse" + item.SequenceID;
+                string seqID2 = "collapse" + item.SequenceID;
+
+                if (item.SequenceID != seq)
+                {
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <table class="table-responsive">
+                                <tr>
+                                    <td>
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-toggle="collapse" data-target="@seqID1" aria-expanded="true" aria-controls="">
+                                                دسته فایل به تاریخ ارسال @item.PublishedDate.ToShamsi()[0] ساعت @item.PublishedDate.ToShamsi()[1]|
+                                                گروه @item.GroupName|
+                                            </button>
+                                        </h5>
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("تایید", "Confirm", new { Area = "Admin", sequenceId = item.SequenceID },
+                                                                                       new { @onclick = "return Confirm();", @class = "btn btn-success" })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("حذف", "Delete", new { Area = "Admin", sequenceId = item.SequenceID, },
+                                                                          new { @onclick = "return Delete();", @class = "btn btn-danger" })
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div id="@seqID2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <table class="table-responsive">
+                                    <tr>
+                                        <td>
+                                            <audio controls="controls">
+                                                <source src="@Url.Content(String.Format("~/Dataset/{0}/{1}/{2}{3}", item.CreatorId, item.SequenceID, item.FileID, item.FileType))" type="audio/mpeg" />
+                                            </audio>
+                                        </td>
+                                        <td>
+                                            <div>طول فایل ثانیه : @item.FileDuration</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div id="@seqID2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <table class="table-responsive">
+                                <tr>
+                                    <td>
+                                        <audio controls="controls">
+                                            <source src="@Url.Content(String.Format("~/Dataset/{0}/{1}/{2}{3}", item.CreatorId, item.SequenceID, item.FileID, item.FileType))" type="audio/mpeg" />
+                                        </audio>
+                                    </td>
+                                    <td>
+                                        <div> طول فایل ثانیه : @item.FileDuration</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                }
+
+                seq = item.SequenceID;
+            }
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script type="text/javascript">
+        function Confirm() {
+            if (confirm("بعد از تایید فایل به زمان بند ارسال خواهد شد. آیا مطمئن هستید؟"))
+                return true;
+            else
+                return false;
+        }
+
+        function Delete() {
+            if (confirm("آیا مطمپن به حذف این دسته هستید؟"))
+                return true;
+            else
+                return false;
+        }
+    </script>
+}

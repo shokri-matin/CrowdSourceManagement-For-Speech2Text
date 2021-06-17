@@ -1,0 +1,199 @@
+﻿@model IEnumerable<DataLayer.Group>
+
+@{
+    ViewBag.Title = "| مدیریت فایل ها";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2></h2>
+<div class="container">
+    <br />
+    <br />
+    <div class="card">
+        <span class="fa fa-file-upload"></span>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-7">
+                    <h5 class="card-title">آپلود دسته فایل</h5>
+                    <p class="card-text">لطفا فایهای مورد نظر را که در <b class="bg-warning">یک دسته</b> قرار دارند انتخاب کنید</p>
+                    <input multiple id="fileUpload" class="btn btn-info" type="file" name="files" />
+                    <input type="button" id="btnUpload" class="btn btn-primary" value="آپلود">
+                    <span id="spinner" hidden class="spinner-border text-primary" role="status" aria-hidden="true"></span>
+                    <span class="bg-danger" id="shower"></span>
+                </div>
+                <div class="col-5">
+                    <span class="text-info">عنوان دسته</span>
+                    @{
+                        List<SelectListItem> listItems = new List<SelectListItem>();
+                        foreach (var item in Model)
+                        {
+                            listItems.Add(new SelectListItem { Value = item.GroupID.ToString(), Text = item.GroupName });
+                        }
+
+                        @Html.DropDownList("عنوان دسته", (listItems), new { @class = "form-control", @id = "drgroup" });
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class="progress">
+        <div class="progress-bar bg-success"
+             id="progressbar"
+             role="progressbar"
+             aria-valuenow="0"
+             aria-valuemin="0"
+             aria-valuemax="100"></div>
+    </div>
+    <br />
+    <span id="counter"></span>
+    <span id="counter_text" style="visibility:hidden">فایل با موفقیت به سرور ارسال شد </span>
+    <br />
+    <table id="tblUpload" class="table table-bordered table-hover"></table>
+
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(
+            $("#fileUpload").change(function () {
+
+                ResetFormUpload()
+
+                var input = document.getElementById('fileUpload');
+                var output = document.getElementById('tblUpload');
+
+                output.innerHTML = '<tr>';
+                output.innerHTML += '<th><b>نام فایل</b></th>';
+                for (var i = 0; i < input.files.length; ++i) {
+                    output.innerHTML += '<td>' + input.files.item(i).name + '</td>';
+                }
+                output.innerHTML += '</tr>';
+            })
+        );
+
+        $(
+            $("#btnUpload").click(function () {
+
+                ResetFormUpload()
+                gid = $('#drgroup').val();
+                if (gid == null || gid == "") {
+                    $("#shower").html("عنوان دسته خالی می باشد")
+                    return
+                }
+
+                if (window.FormData !== undefined) {
+
+                    fileUpload = $("#fileUpload").get(0)
+                    var files = fileUpload.files;
+
+                    if (files.length <= 0)
+                        $("#shower").html("هیچ فایلی انتخاب نشده است")
+                    else {
+                        FormDisable()
+                        $("#tblUpload").append("<tr><th>نام فایل</th><th>وضعیت ارسال فایل</th></tr>")
+
+                        length = files.length
+                        id = CreateUUID()
+
+
+                        for (var i = 0; i < files.length; i++) {
+
+                            if (!(files[i].name.split('.').pop().toLowerCase() == "mp3" || files[i].name.split('.').pop().toLowerCase() == "wav")) {
+                                length = length - 1
+                                SetProgress(files.length)
+                                $("#tblUpload").append('<tr class="bg-danger"><td>' + files[i].name + '</td><td>' + "پسوند فایل باید mp3 یا wav  باشد" + '</td></tr>');
+                                continue
+                            }
+
+                            var fileData = new FormData();
+                            fileData.append(files[i].name, files[i]);
+
+                            $.ajax({
+                                url: '/FileManagement/AjaxFileUpload?id=' + id + '&gid=' + gid,
+                                type: "POST",
+                                contentType: false, // Not to set any content header
+                                processData: false, // Not to process data
+                                data: fileData,
+                                success: function (result) {
+
+                                    SetProgress(files.length)
+
+                                    if (result.v1 == "error") {
+                                        $("#tblUpload").append('<tr class="bg-danger"><td>' + result.v3 + '</td><td>' + result.v2 + '</td></tr>');
+                                    } else {
+                                        $("#tblUpload").append('<tr><td>' + result.v3 + '</td><td>' + "<span class='fa fa-check-circle' style='color:green'></span>" + '</td></tr>');
+                                    }
+
+                                    count = $("#counter").html()
+                                    if (count == "") {
+                                        $("#counter").html("1")
+                                    } else {
+                                        count = $("#counter").html()
+                                        count = parseInt(count) + 1
+                                        count = $("#counter").html(count)
+                                        $("#counter_text").css("visibility", "visible")
+                                    }
+
+                                    if ($("#counter").html() == length)
+                                        FormEnable()
+                                },
+                                error: function (err) {
+                                    $("#shower").html(err.statusText);
+                                }
+                            }
+                            )
+                        }
+                    }
+
+                } else {
+                    $("#shower").html("لطفا از ورژن های به روز تر مرورگر استفاده کنید");
+                }
+
+            })
+        );
+
+        function ResetFormUpload() {
+
+            $("#shower").html("")
+            $("#progressbar").attr("aria-valuenow", 0)
+            $("#progressbar").css("width", 0)
+            $("#tblUpload").html("")
+            $("#counter").html("")
+            $("#counter_text").css("visibility", "hidden")
+            $("#spinner").attr("hidden", true)
+        }
+
+        function FormDisable() {
+            $("#btnUpload").prop("disabled", "true")
+            $("#fileUpload").prop("disabled", "true")
+            $("#spinner").removeAttr("hidden")
+        }
+
+        function FormEnable() {
+            $("#btnUpload").removeAttr("disabled")
+            $("#fileUpload").removeAttr("disabled")
+            $("#spinner").attr("hidden", true)
+        }
+
+        function SetProgress(nfiles) {
+
+            percent = (1 / nfiles) * 100
+            current = $("#progressbar").attr("aria-valuenow")
+            now = parseFloat(current) + percent
+            $("#progressbar").attr("aria-valuenow", now)
+            w = now + "%"
+            $("#progressbar").css("width", w)
+            //$("#progressbar").html(i + "فایل یا موفقیت آپلود شد ...")
+        }
+
+        function CreateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+    </script>
+}
